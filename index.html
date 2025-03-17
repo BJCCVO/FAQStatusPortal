@@ -37,6 +37,18 @@
                 padding-top: 10px;
             }
 
+            .lead {
+                position:inherit;
+                height: 10px;
+                left: 20px;
+                padding-top: 0px;
+                display: flex;
+                list-style-type: disc;
+                text-transform: none;
+                text-align: left;
+                font-weight: inherit;
+            }
+
             li {
                 display: inline-block;
                 width: 120px;
@@ -189,6 +201,19 @@
                 color: green;
             }
 
+            .list {
+                list-style-type: circle;
+                display: left;
+                width: 450px;
+                height: 450px;
+                padding-top: 5px;
+                margin-left: 5px;
+                font-weight: normal;
+                list-style:circle;
+                text-align: left;
+                text-transform: none;
+            }
+
             .bad {
                 color: red;
             }
@@ -227,11 +252,11 @@
                 padding-top: 90px;
                 position: fixed;
                 padding-left: 50px;
-                max-width: 90%;
+                max-width: 80%;
             }
 
             .search-bar input {
-                width: 70%;
+                width: 30%;
                 min-width: 300px;
                 padding: 10px 20px;
                 border-radius: 20px;
@@ -275,29 +300,33 @@
         <div class="search-bar">
             <input id="search" type="text" placeholder="&#x1F50D; Search for partial or full word"/>
             <input class="button" id="button" type="button" value="Find Next" onclick="search(document.getElementById('search').value)">
-        </div>
+        </div>        
 
         <div class="content">
             <details name="info">
                 <summary>Searching for a Provider</summary>
-                <p>Providers can be found by searching with their last and/or first name. A new screen will load after searching that lists what facility(ies) a given provider is currently active at in order to help correctly identify the desired provider.</p>
+                <p>Providers can be found by searching on their last and/or first name.</p>   
+                <p>A new screen will appear that lists what facility(ies) a given provider is currently active at or applying to.</p>  
+                <p>Click on provider name to open profile.</p>
             </details>
 
             <details name="info">
                 <summary>General Provider Information</summary>
-                <p>This section contains the providers name, information on their WashU Faculty Appointment (if applicable), and a summary of their credentialing (ie: if they are being reappointed for a facility, initialed at a facility, or if there is a change at a facility). This timeline summary can help identify what areas to look at in the Application Information section and the Credentialing Status section.</p>
+                <p>This section contains information on: </p>
+                <p style="margin-left: 15px;">&#x2756; the providers WashU Faculty Appointment (if applicable)</p>
+                <p style="margin-left: 15px;">&#x2756; a summary of the facilities they are being credentialed with</p>
             </details>
 
             <details name="info">
                 <summary>Timeline</summary>
-                <p>This section of the portal is meant to help quickly identify where a provider is at in the process. If there is a date populated for the area, then that department has completed their portion of the review.</p>
+                <p>This section will identify where a provider is at in the process. If there is a date populated that portion of the review has been completed.</p>
             </details>
 
             <details name="info">
                 <summary>Application Information</summary>
                 <p>This section contains information on the CVO process. There are both summaries of information and a full report on both the initial and reappointment process.</p>
 
-                <p>The summaries ("CVO Initial Credentialing" and "CVO Reappointment Credentialing") are meant to give a high level overview of key points in the CVO credentialing process. More detailed information can be found in "CVO Initial Credentialing Full Detail" and "CVO Reappointment Credentialing Full Detail". These areas will contain all information the CVO has entered so far in the process.</p>
+                <p>The summaries ("CVO Initial Credentialing" and "CVO Reappointment Credentialing") give a high level overview of key points in the CVO credentialing process. More detailed information can be found in "CVO Initial Credentialing Full Detail" and "CVO Reappointment Credentialing Full Detail". These areas will contain all information the CVO has collected so far in the process.</p>
             </details>
 
             <details name="info">
@@ -311,7 +340,7 @@
 
             <details name="info">
                 <summary>Pending Information</summary>
-                <p>The items in this section are things still required by the MSO in order to complete either initialing a provider, reappointing a provider, or a change of some type. Required items vary between specialties and facilities, so any questions about pending items should be directed to the specified facilities MSO. Some items, such a licenses, are standard between facilities and questions can be directed to any MSO or the CVO.</p>
+                <p>The items in this section are things still required in order to complete either initialing a provider, reappointing a provider, or a change of some type. Required items vary between specialties and facilities, so any questions about pending items should be directed to the specified facilities MSO. Some items, such as licenses, are standard between facilities.</p>
             </details>
 
             <details name="info">
@@ -722,12 +751,12 @@
                 <summary>Common Issues</summary>
                     <details class="issues" name="common">
                         <summary>CV Date Format</summary>
-                        <p>All dates must be in mm/yy format.  If not sent in mm/yy format, your application process will be delayed until this is received.</p>
+                        <p>All dates must be in mm/yy format to prevent delays in application processing.</p>
                     </details>
 
                     <details class="issues" name="common">
                         <summary>CV File Format</summary>
-                        <p>Please ensure your CV is in either .pdf or .jpeg format, and is <4MB in overall size.</p>
+                        <p>All CV’s must be submitted in either .pdf or .jpeg format, and be <4MB in overall size.</p>
                     </details>
             </details>
 
@@ -774,7 +803,7 @@
                     </tr>
                     <tr>
                         <td>CVO</td>
-                        <td>Credentials Verification Office</td>
+                        <td>Credentialing Verification Organization</td>
                     </tr>
                     <tr>
                         <td>DEA</td>
@@ -791,10 +820,6 @@
                     <tr>
                         <td>FSMB</td>
                         <td>Federation of State Medical Boards</td>
-                    </tr>
-                    <tr>
-                        <td>HFAB</td>
-                        <td>Healthcare Facilities Accreditation Program</td>
                     </tr>
                     <tr>
                         <td>KB</td>
@@ -834,7 +859,7 @@
                     </tr>
                     <tr>
                         <td>PDMC</td>
-                        <td>Provider Database Management Center</td>
+                        <td>Provider Data Management Center</td>
                     </tr>
                     <tr>
                         <td>PSV</td>
